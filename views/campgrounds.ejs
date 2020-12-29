@@ -5,7 +5,7 @@
       <div class="container">
         <h1 class="display-4">Welcome to Blend!</h1>
         <p class="lead">View our hand-picked campgrounds from all over the world</p>
-        <p>
+        <p class="lead">
           <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
         </p>
       </div>
@@ -14,14 +14,15 @@
     <div class="row">
       <% campgrounds.forEach((campground)=> { %>
         <div class="col-md-3 col-sm-6">
-          <div class="card">
-            <img class="card-img-top img-thumbnail" src="<%= campground.image %> " alt="Campground image">
-            <div class="card-body">
-              <h4 class="card-text"><%= campground.name %></h4>
-            </div>  
-            
+          <div class="card-group">
+            <div class="card">
+              <img class="card-img-top img-thumbnail" src="<%= campground.image %> " alt="Campground image">
+              <div class="card-body">
+                <h4 class="card-text"><%= campground.name %></h4>
+              </div>  
+              
+            </div>
           </div>
-          
           
         </div>
       <% }); %> 
