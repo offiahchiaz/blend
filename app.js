@@ -38,9 +38,13 @@ app.post('/campgrounds', (req, res) => {
     image
   };
 
-  campgrounds.push(newCampground);
+  Campground.create(newCampground, (err, newlyCreated) => {
+    if (err) {
+      console.log(err);
+    }
 
-  res.redirect('/campgrounds');
+    res.redirect('/campgrounds');
+  });
 });
 
 app.get('/campgrounds/new', (req, res) => {
